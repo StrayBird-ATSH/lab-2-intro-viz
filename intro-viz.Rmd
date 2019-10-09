@@ -1,0 +1,138 @@
+---
+title: "Visualizing Data"
+subtitle: "Write your Student IDs here"
+author: "Mine Dogucu"
+date: "due:Oct 9, 2019 at the end of discussion"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r message = FALSE}
+library(tidyverse)
+library(fivethirtyeight)
+library(titanic)
+```
+
+
+## Slide 9 Plot
+
+Text:
+
+1. Survived
+
+2. Survived is on the x-axis 
+
+3. Bar plot
+
+Code:
+
+```{r}
+titanic_train %>% 
+  ggplot(aes(x = Survived)) +
+  geom_bar()
+```
+
+\pagebreak
+
+
+
+## Slide 10 Plot
+
+Text:
+
+1. Fare
+
+2. Fare is on the x-axis
+
+3. Histogram
+
+Code:
+
+```{r}
+titanic_train %>% 
+  
+  ggplot(aes(x=Fare)) +
+  geom_histogram()
+```
+
+\pagebreak
+
+## Slide 11 plot
+
+
+
+Code:
+
+```{r}
+titanic_train %>% 
+  
+  ggplot(aes(x=Fare)) +
+  geom_histogram(bins = 40)
+```
+
+\pagebreak
+
+## Slide 13 plot
+
+Text:
+
+1. Pclass and Fare
+
+2. Pclass on x-axis, Fare on y-axis
+
+3. Boxplot
+
+```{r}
+titanic_train %>% 
+  ggplot(aes(x=factor(Pclass), y= Fare)) +
+  geom_boxplot()
+```
+
+\pagebreak
+
+## Slide 15 plot
+
+Text:
+
+1. Age and Fare
+
+2. Age is on x-axis and Fare is on y-axis
+
+3. 
+```{r}
+titanic_train %>% 
+  ggplot(aes(x=Age, y= Fare)) +
+  geom_point()
+```
+
+No real relationship between Age and Fare
+
+\pagebreak
+
+## Slide 21 plot
+
+Code:
+
+```{r}
+titanic_train %>% 
+  ggplot(aes(x=factor(Pclass), fill=Survived)) +
+  geom_bar(aes(fill=factor(Survived)))
+```
+
+\pagebreak
+
+## Slide 22 plot
+
+Code:
+
+```{r}
+bechdel %>% 
+  ggplot(aes(x=domgross, fill = binary))+
+  geom_histogram(aes(fill=binary),bins = 80) +
+  scale_fill_manual(values = c("blue", "magenta"))
+```
+
