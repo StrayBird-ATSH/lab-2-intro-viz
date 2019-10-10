@@ -96,7 +96,8 @@ Text:
 ```{r}
 titanic_train %>% 
   ggplot(aes(x=factor(Pclass), y= Fare)) +
-  geom_boxplot()
+  geom_boxplot() +
+  xlab("Pclass")
 ```
 
 \pagebreak
@@ -139,7 +140,8 @@ Code:
 ```{r}
 titanic_train %>% 
   ggplot(aes(x=factor(Pclass), fill=Survived)) +
-  geom_bar(aes(fill=factor(Survived)))
+  geom_bar(aes(fill=factor(Survived))) +
+  xlab("Pclass")
 ```
 
 \pagebreak
