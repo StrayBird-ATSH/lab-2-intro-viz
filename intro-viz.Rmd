@@ -63,6 +63,13 @@ titanic_train %>%
 
 ## Slide 11 plot
 
+Text:
+
+1. Fare
+
+2. Fare is on the x-axis
+
+3. Histogram
 
 
 Code:
@@ -102,7 +109,10 @@ Text:
 
 2. Age is on x-axis and Fare is on y-axis
 
-3. 
+3. Scatter-plot
+
+Code:
+
 ```{r}
 titanic_train %>% 
   ggplot(aes(x=Age, y= Fare)) +
@@ -115,6 +125,15 @@ No real relationship between Age and Fare
 
 ## Slide 21 plot
 
+Text:
+
+1. Pclass, Survived
+
+2. Pclass on the x-axis, Survived stacked 
+
+3. Stacked bar plot
+
+
 Code:
 
 ```{r}
@@ -126,6 +145,15 @@ titanic_train %>%
 \pagebreak
 
 ## Slide 22 plot
+
+
+Text:
+
+1. domgross, binary(FAIL/PASS)
+
+2. domgross on the x-axis, binary stacked
+
+3. Stacked histogram
 
 Code:
 
