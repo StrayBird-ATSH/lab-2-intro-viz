@@ -56,7 +56,7 @@ Code:
 titanic_train %>% 
   
   ggplot(aes(x=Fare)) +
-  geom_histogram()
+  geom_histogram(binwidth=40)
 ```
 
 \pagebreak
@@ -117,7 +117,7 @@ Code:
 ```{r}
 titanic_train %>% 
   ggplot(aes(x=Age, y= Fare)) +
-  geom_point()
+  geom_point(na.rm=TRUE)
 ```
 
 No real relationship between Age and Fare
@@ -162,7 +162,7 @@ Code:
 ```{r}
 bechdel %>% 
   ggplot(aes(x=domgross, fill = binary))+
-  geom_histogram(aes(fill=binary),bins = 80) +
+  geom_histogram(aes(fill=binary),bins = 80,na.rm=TRUE) +
   scale_fill_manual(values = c("blue", "magenta"))
 ```
 
