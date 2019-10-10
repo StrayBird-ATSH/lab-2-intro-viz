@@ -1,7 +1,7 @@
 ---
 title: "Visualizing Data"
-subtitle: "75694189 16257626 13341225"
-author: "Chen Wang, Junke Wang, Zhuozhi Xiong"
+subtitle: "75694189 16257626 13341225 49442423"
+author: "Chen Wang, Junke Wang, Zhuozhi Xiong, Titas Dutta"
 date: "due:Oct 9, 2019 at the end of discussion"
 output: pdf_document
 ---
