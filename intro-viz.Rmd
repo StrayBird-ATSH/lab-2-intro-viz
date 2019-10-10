@@ -56,7 +56,8 @@ Code:
 titanic_train %>% 
   
   ggplot(aes(x=Fare)) +
-  geom_histogram(binwidth=40)
+  geom_histogram()
+  # in this way, may receive a warning, to eliminate the warning, just typing "binwidth=40"
 ```
 
 \pagebreak
@@ -117,7 +118,8 @@ Code:
 ```{r}
 titanic_train %>% 
   ggplot(aes(x=Age, y= Fare)) +
-  geom_point(na.rm=TRUE)
+  geom_point()
+  # in this way, may receive a warning, to eliminate this, just typing "na.rm=TRUE"
 ```
 
 No real relationship between Age and Fare
